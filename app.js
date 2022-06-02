@@ -25,12 +25,10 @@ $(".btn").click(function () {
     let btnSound = new Audio(`sounds/${guess}.mp3`);
     btnSound.play();
     checkGuess();
-
     $(this).addClass("click");
     setTimeout(function () {
         $(`#${guess}`).removeClass("click");
     }, 131.25);
-
 });
 
 function addAnswer() {
@@ -62,8 +60,4 @@ function checkGuess() {
             setTimeout(addAnswer, 650);
         }
     }
-}
-
-function playSound() {
-
 }
